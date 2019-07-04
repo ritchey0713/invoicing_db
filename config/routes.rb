@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get "errors", :to => "users#error_page"
 
+  get "users/:id", :to => "users#show", :as => "user_show"
 
   resources :categories, only: [:index, :new, :create, :edit, :update, :show, :destroy]  
     
