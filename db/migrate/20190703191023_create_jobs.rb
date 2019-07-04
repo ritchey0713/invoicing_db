@@ -4,6 +4,7 @@ class CreateJobs < ActiveRecord::Migration[5.2]
       t.string :address 
       t.integer :duration 
       t.string :notes
+      t.string :job_type
       t.string :builder_name
     end
   end

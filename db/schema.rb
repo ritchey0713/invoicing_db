@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_201416) do
     t.string "address"
     t.integer "duration"
     t.string "notes"
+    t.string "job_type"
     t.string "builder_name"
     t.integer "user_id"
     t.integer "company_id"
