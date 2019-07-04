@@ -3,23 +3,19 @@ class ApplicationController < ActionController::Base
     before_action :authenticate_user!
   
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :username])
-      #devise_parameter_sanitizer.permit(:accept_invitation, keys: [:role])
-      #devise_parameter_sanitizer.permit(:invite, keys: [:role])
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :username, :phone_number, :occupation, :hourly_rate])
     end
   
-    # def after_sign_in_path_for(resource)
-    #   if current_user.role == "performer" 
-    #     new_performer_path
-    #   elsif current_user.role == "partner"
-    #     new_partner_path
-    #   elsif current_user.role == "admin"
-    #     root_path
-    #   end 
-    # end
+    def after_sign_in_path_for(resource)
+      if current_user
+        user_show_path(current_user)
+      else 
+        "/users/sign_in"
+      end 
+    end
   
   
-    # def after_sign_out_path_for(resource)
-    #   "/users/sign_in"
-    # end 
+    def after_sign_out_path_for(resource)
+      "/users/sign_in"
+    end 
 end
