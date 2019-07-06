@@ -1,1 +1,5 @@
 <h1>user show</h1>
+
+<% current_user.companies.each do |company| %>
+    <%= company.name %>
+<% end %>
