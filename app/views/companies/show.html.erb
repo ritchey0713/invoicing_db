@@ -1,1 +1,12 @@
 <h1>Company Show!</h1>
+
+<%= @company.name %>
+Users: <% @company.users.each do |user| %>
+    <%= user.username%>,
+<% end %>
+
+<%# byebug%>
+<%=link_to "edit", edit_company_path(@company) if current_user.companies.find_by(name: @company.name) %>
+
+add yourself to company!
+
