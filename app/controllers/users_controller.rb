@@ -5,7 +5,12 @@ class UsersController < ApplicationController
     #   end
     end
   
-    def error_page 
+    def errors_page 
   
     end
+
+    def show 
+      
+    end 
+    
   end 
