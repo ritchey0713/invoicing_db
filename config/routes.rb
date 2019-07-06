@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root :to => 'users#landing_page'
 
-  get "errors", :to => "users#error_page"
+  get "errors", :to => "users#errors_page"
 
   get "users/:id", :to => "users#show", :as => "user_show"
 
