@@ -41,7 +41,7 @@ class CompaniesController < ApplicationController
     end 
 
     def destroy 
-
+        #should a company be destroyed?
     end 
 
 
@@ -54,10 +54,6 @@ class CompaniesController < ApplicationController
     def set_company 
         @company = Company.find_by_id(params[:id])
     end 
-
-    #not needed, companies scoped to current user
- 
-
 
     def company_params 
         params.require(:company).permit(
