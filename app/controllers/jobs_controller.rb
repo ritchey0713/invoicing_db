@@ -9,7 +9,7 @@ class JobsController < ApplicationController
     def new 
         @company = Company.find_by(id: params[:company_id])
         @job = Job.new 
-        @job.category = Category.new
+        @job.build_category # belongs to build association
     end 
 
     def create 
