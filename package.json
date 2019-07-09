@@ -1,5 +1,22 @@
 {
   "name": "ritchey_invoicing",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootbox": "^4.4.0",
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "jquery-ujs": "^1.2.2",
+    "ng-animate": "^0.3.4",
+    "popper": "^1.0.1",
+    "select2": "^4.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-uglify": "^3.0.1"
+  }
 }
