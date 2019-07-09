@@ -1,16 +1,16 @@
 <%= form_for @company do |f| %>
 
     <%= f.label :name %>
-    <%= f.text_field :name, required: true %>
+    <%= f.text_field :name, required: true, value: @company.name %>
 
     <%= f.label :hourly_pay_rate %>
-    <%= f.number_field :hourly_pay_rate, required: true %>
+    <%= f.number_field :hourly_pay_rate, required: true, value: @company.hourly_pay_rate %>
 
     <%= f.label :phone_number %>
-    <%= f.text_field :phone_number, required: true %>
+    <%= f.text_field :phone_number, required: true, value: @company.phone_number %>
 
     <%= f.label :website %>
-    <%= f.text_field :website, required: true %>
+    <%= f.text_field :website, required: true, value: @company.website %>
 
 
     <%= f.submit "submit"%>
