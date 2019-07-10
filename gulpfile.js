@@ -50,7 +50,7 @@ gulp.task('pack-js', function () {
 gulp.task('pack-css', function () {	
 	return gulp.src([  
   'node_modules/bootstrap/dist/css/bootstrap.css',
-  'assets/css/application.css',
+  'assets/css/application.scss',
   'assets/css/mobiscroll.jquery.min.css',  
   'node_modules/angular-ui-grid/ui-grid.css',
   'assets/css/ui-grid.css.scss',
