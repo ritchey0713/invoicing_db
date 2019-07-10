@@ -1,0 +1,8 @@
+<div class="inner">
+    <%= Time.now.year %> &copy; Ritchey Invoicing
+    <br />
+    <% if current_user %>
+        <span class="small m-b-0"> Signed in as: <%= current_user.email %> (<%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %>)
+        </span>
+    <% end %>
+</div>
